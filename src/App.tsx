@@ -1,11 +1,20 @@
-import Header from './components/Header';
+import { BrowserRouter, Route, Routes } from "react-router"
+import Body from "./components/Body"
+import Login from "./components/Login"
+import Profile from "./components/Profile"
+
 function App() {
 
   return (
     <>
-    <Header/>
-    <h1 className="text-5xl bold underline">Hello world</h1>
-    <button className="btn">Hello</button>
+    <BrowserRouter basename="/">
+    <Routes>
+      <Route path="/" element={<Body />}>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }

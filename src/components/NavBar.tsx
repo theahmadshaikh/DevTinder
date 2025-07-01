@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header: React.FC = () => {
+const NavBar: React.FC = () => {
   return (
     <div className="navbar bg-base-300 shadow-sm">
       <div className="flex-1">
@@ -43,4 +43,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default NavBar;
