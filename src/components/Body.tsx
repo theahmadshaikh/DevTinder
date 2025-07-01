@@ -1,11 +1,16 @@
 import { Outlet } from "react-router";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const Body : React.FC = () => {
   return (
     <>
     <NavBar/>
-    <Outlet/>
+    <main className="min-h-screen">
+      <Outlet/>
+    </main>
+    
+    <Footer/>
     </>
   );
 }
